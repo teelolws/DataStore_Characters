@@ -1,0 +1,8 @@
+package-as: DataStore_Characters
+
+move-folders:
+ DataStore_Characters/DataStore_Characters: DataStore_Characters
+
+ignore:
+ - LICENCE.md
+ - README.md

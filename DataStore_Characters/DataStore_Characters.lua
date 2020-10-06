@@ -165,7 +165,7 @@ local function _GetCharacterClass(character)
 end
 
 local function _GetColoredCharacterName(character)
-    if not RAID_CLASS_COLORS[character.englishClass].colorStr then return end
+    if (not character.englishClass) or (not RAID_CLASS_COLORS[character.englishClass]) or (not RAID_CLASS_COLORS[character.englishClass].colorStr) then return end
 	return format("|c%s%s", RAID_CLASS_COLORS[character.englishClass].colorStr, character.name)
 end
 	

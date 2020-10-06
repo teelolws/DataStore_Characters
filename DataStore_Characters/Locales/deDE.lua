@@ -10,4 +10,7 @@ L["REQUEST_PLAYTIME_DISABLED"] = "Die Spielzeit wird nicht beim Anmelden abgefra
 L["REQUEST_PLAYTIME_ENABLED"] = "Die Spielzeit wird beim Anmelden abgefragt."
 L["REQUEST_PLAYTIME_TEXT"] = "Spielzeit beim Anmelden abfragen."
 L["REQUEST_PLAYTIME_TITLE"] = "Spielzeit abfragen"
-
+L["HIDE_LOGIN_PLAYTIME_DISABLED"] = "Your playtime will not be displayed when you login. (Other addons may interfere with this) [TRANSLATION NEEDED]"
+L["HIDE_LOGIN_PLAYTIME_ENABLED"] = "Your playtime will be displayed when you login. [TRANSLATION NEEDED]"
+L["HIDE_LOGIN_PLAYTIME_TEXT"] = "Hide login playtime [TRANSLATION NEEDED]"
+L["HIDE_LOGIN_PLAYTIME_TITLE"] = "Hide play time when logging in [TRANSLATION NEEDED]"

@@ -52,6 +52,7 @@ local AddonDB_Defaults = {
 				guildName = nil,		-- nil = not in a guild, as returned by GetGuildInfo("player")
 				guildRankName = nil,
 				guildRankIndex = nil,
+                guildServer = nil,      -- for guilds on different servers, nil if same server
 			}
 		}
 	}
@@ -76,12 +77,13 @@ local function OnPlayerGuildUpdate()
 	-- however, the value returned here is correct
 	if IsInGuild() then
 		-- find a way to improve this, it's minor, but it's called too often at login
-		local name, rank, index = GetGuildInfo("player")
+		local name, rank, index, realm = GetGuildInfo("player")
 		if name and rank and index then
 			local character = addon.ThisCharacter
 			character.guildName = name
 			character.guildRankName = rank
 			character.guildRankIndex = index
+            character.guildRealm = realm
 		end
 	end
 end
@@ -340,7 +342,7 @@ local function _IsXPDisabled(character)
 end
 	
 local function _GetGuildInfo(character)
-	return character.guildName, character.guildRankName, character.guildRankIndex
+	return character.guildName, character.guildRankName, character.guildRankIndex, character.guildRealm
 end
 
 local function _GetPlayTime(character)
